@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'glosa_displaybold';
+    src: url('../fonts/glosadisplay-bold-webfont.eot');
+    src: url('../fonts/glosadisplay-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/glosadisplay-bold-webfont.woff2') format('woff2'),
+         url('../fonts/glosadisplay-bold-webfont.woff') format('woff'),
+         url('../fonts/glosadisplay-bold-webfont.ttf') format('truetype'),
+         url('../fonts/glosadisplay-bold-webfont.svg#glosa_displaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+a:focus, button:focus, input:focus, select:focus{outline:none;}
+select:active{outline:none;}
+a:hover{text-decoration: none;}
+.clear{clear:both;}
+body{margin:0;padding:0;background: #fff;}
+ul{list-style-type:none;margin:0;padding:0;}
+.navbar-toggle{ border: 1px solid #ccc !important;}
+.navbar-toggle span{background:#0054ff;}
+.row h2{margin-bottom:30px;}
+.AlignRight{text-align: right;}
+.BorderRight{border-right: 1px solid #ddd;}
+
+.container{max-width: 940px;padding: 0 !important;}
+
+header{margin-bottom: 30px;position: relative;}
+header #Portada{background: url(../img/bg_reportes_head.png) no-repeat;background-size:cover;width:100%;height: 182px;}
+header #Portada h1{color:#fff;text-align:center;margin-top: 0;text-transform: uppercase;font:normal 43px/43px 'glosa_displaybold', serif;padding-top: 60px;text-shadow:1px 1px 2px #000;}
+
+header button{position: absolute !important;right: 44% !important;top:110px !important;overflow: visible !important;background-color:transparent !important;cursor: pointer;}
+header button:hover{background-color:transparent !important;}
+header button::before{content: 'COMPARTIR';text-align: right;color: #fff;font: normal 11px sans-serif;position: absolute;right: 40px;top: 31%;opacity: 0.6;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;}
+header button:hover::before{opacity: 1;}
+#demo-menu-lower-left{position:absolute;top:0;z-index:100;min-width:26px;width:26px;height: 26px;}
+#demo-menu-lower-left .material-icons{
+    font-size:22px;
+    opacity:0.6;
+    left: 40%;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    color: #FFF;
+    }
+#demo-menu-lower-left:hover .material-icons{opacity: 1;}
+li.mdl-menu__item img{margin-right: 10px;display:inline-block;}
+li.mdl-menu__item a{text-decoration: none;color:#333;}
+
+header nav{height: 50px;}
+header nav #TipoIndicador{list-style-type: none;margin:0;padding: 0;float: left;}
+header nav #TipoIndicador li{height: 50px;line-height: 50px !important;background: #fff;font: normal 16px sans-serif; color:#666;
+    float:left;text-align:center;-webkit-transition: background 0.3s;
+    transition: background 0.3s;cursor: pointer;}
+header nav #TipoIndicador li:hover{background: #ededed;}
+header nav #TipoIndicador li.Active{background: #0038aa;color: #fff;}
+header nav #Trimestre{float: right;}
+
+#Grafica{margin-bottom: 20px;}
+#Grafica span{padding: 0 10px;color:#fff;font:bold 14px/25px sans-serif;float: left;display: block;text-transform: uppercase;}
+#Grafica span.Porcentaje b{font-weight: normal;}
+#Grafica .Supero{background: green;}
+#Grafica .EnLinea{background: silver; color:#333 !important;}
+#Grafica .Decepciono{background: red;}
+#Grafica span.Leyenda{color:#000;}
+
+table{font:normal 12px sans-serif;width: 100%;}
+table tr{border-bottom: 1px solid #ddd;cursor: pointer;background: #fff;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;cursor: pointer;}
+table tr:nth-child(even){background: #f8f8f8;}
+table tr:hover{background: black;}
+table tr:hover td{color: #fff;}
+table tr.TableHead:hover{background: white;cursor: default;}
+table tr th{line-height: 30px;height: 30px;font-weight: bold;color: black;padding: 0 10px;}
+table tr td{line-height: 30px;height: 30px;color: #465c6a;padding: 0 10px;}
+table tr td a{color: #0066a5;text-decoration: none;}
+table tr td a:hover, table tr td a:focus{text-decoration: none;}
+table tr td.Fecha{text-transform: uppercase;}
+table tr td.Fecha, table tr td.VarActual{border-right: 1px solid #ddd;}
+table tr td.Fecha, table tr td.VarActual, table tr td.VarAnual{text-align: right;}
+table tr td.Fecha a{color:#999;margin-left: 10px;text-transform: uppercase;font-size: 11px;}
+table tr:hover td.Fecha a{color:#999;}
+table tr td.Fecha a:hover{color:white;}
+table tr:hover td a{color: #eee;}
+table tr td.Positivo{color: #11b400;}
+table tr td.Negativo{color: #ff0000;}
+
+
+#GposFinancieros{margin:50px 0 25px !important;}
+#GposFinancieros .Anotacion{color:#666;font: normal 12px sans-serif;}
+
+#Fuente{color:#666;font: normal 12px sans-serif;margin-top:50px;}
+
+@media (min-width: 768px) {
+header nav #TipoIndicador li{width: 116px;}
+}
+@media (max-width: 767px) {
+    header nav #TipoIndicador{float: none;}
+    table tr td.VarActual, .BorderRight{border-right: none;}
+    header #Portada h1{font-size: 30px;line-height: 36px;padding-top: 40px;}
+    table tr th{line-height: 16px;}
+    div.cs-skin-underline{max-width: 100% !important;margin:10px 0;margin: 10px 0;border-bottom: 1px solid #053391;padding-bottom: 10px;}
+    .cs-skin-underline > span::after{right: 1em !important;}
+    #GposFinancieros{padding:0 10px;}
+
+}
+
+
+

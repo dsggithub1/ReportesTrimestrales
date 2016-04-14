@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Monitor de Reportes Trimestrales</title>
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Sector Energético, Mapa económico de México, Mapa interactivo, BMV, Bolsa Mexicana de Valores, Macroeconomía, Microeconomía, Bolsas, Educación financiera, Finanzas Personales, Elfinanciero, El Financiero, Economía mexicana, Inflación, Crecimiento, PIB, Tasas, Fondos, Afores, Inversión, Ciclo económico" />
+<meta name="Author" content="El Financiero" />
+<meta name="description" content="" />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script src="js/selectivizr-min.js"></script>
+<script src="js/modernizr.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+<link rel="stylesheet" type="text/css" href="css/cs-skin-underline.css" />
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- GMD -->
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue_grey-indigo.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!-- /GMD -->
+</head>
+
+<body>
+  <div class="container">
+  <header class="">
+    <div id="Portada"><h1>Monitor de Reportes Trimestrales</h1></div>
+    
+    <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton">
+      <i class="material-icons">share</i>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+        for="demo-menu-lower-left">
+      <li class="mdl-menu__item"><a href="http://www.facebook.com/share.php?u=http://graficos.elfinanciero.com.mx/2015/volver-al-futuro/grafica/index.html" onClick="window.open(this.href, this.target, 'width=500,height=400, scrollbars=1'); return false;"><img src="img/facebook.svg" height="16" alt="">Facebook</a></li>
+      <li class="mdl-menu__item"><a href="http://twitter.com/home?status=http://graficos.elfinanciero.com.mx/2015/volver-al-futuro/grafica/index.html" onClick="window.open(this.href, this.target, 'width=500,height=400, scrollbars=1'); return false;"><img src="img/twitter.svg" height="16" alt="">Twitter</a></li>
+      <li class="mdl-menu__item"><a href="https://plus.google.com/share?url=http://graficos.elfinanciero.com.mx/2015/volver-al-futuro/grafica/index.html" onClick="window.open(this.href, this.target, 'width=500,height=400, scrollbars=1'); return false;"><img src="img/plus.svg" height="14" alt="">Google +</a></li>
+    </ul>
+
+    <nav>
+      <ul id="TipoIndicador">
+        <li id="Ingresos" class="Active col-xs-4">Ingresos</li>
+        <li id="EBITDA" class="col-xs-4">EBITDA</li>
+        <li id="Utilidad" class="col-xs-4">Utilidad</li>
+      </ul>
+      <select name="Trimestre" id="Trimestre" class="cs-select cs-skin-underline">
+        <option value="4T15" selected>4TO. TRIMESTRE 2015</option>
+        <option value="3T15">3ER. TRIMESTRE 2015</option>
+        <option value="2T15">2DO. TRIMESTRE 2015</option>
+        <option value="1T15">1ER. TRIMESTRE 2015</option>
+      </select>
+    </nav>
+  </header>
+<!--
+  <div id="Grafica">
+    <span class="Porcentaje Supero"><b>15%</b> Superó</span>
+    <span class="Porcentaje EnLinea"><b>20%</b> En Línea</span>
+    <span class="Porcentaje Decepciono"><b>65%</b> Decepciono</span>
+    <span class="Leyenda">En un conteo de 10 de 30 empresas</span>
+    <div class="clear"></div>
+  </div>
+-->
+  <table id="Ingresos" class="Indicadores">
+    <tr class="TableHead">
+      <th>Compañía</th>
+      <th class="AlignRight BorderRight hidden-xs">Reporte</th>
+      <th>Resultados 4T15</th>
+      <th>Expect. 4T15</th>
+      <th class="AlignRight BorderRight">Variación</th>
+      <th class="hidden-xs">Resultados 4T14</th>
+      <th class="AlignRight hidden-xs">Variación</th>
+    </tr>
+    <tr class="Alfa">
+      <td class="Compania"><a href="#" class="hidden-xs">Alfa</a><a href="#" class="visible-xs">ALFA</a></td>
+      <td class="Fecha hidden-xs"><a href="#">Reporte</a><a href="#">Nota</a></td>
+      <td class="ResultadoActual">67,353</td>
+      <td class="ExpectativaActual">67,353</td>
+      <td class="VarActual Negativo">-3.44 %</td>
+      <td class="ResultadoAnterior hidden-xs">67,353</td>
+      <td class="VarAnual Positivo hidden-xs">3.44 %</td>
+    </tr>
+    <tr class="Alsea">
+      <td class="Compania"><a href="#" class="hidden-xs">Alsea</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs">30 enero</td>
+      <td class="ResultadoActual">67,353</td>
+      <td class="ExpectativaActual">67,353</td>
+      <td class="VarActual Positivo">3.44 %</td>
+      <td class="ResultadoAnterior hidden-xs">67,353</td>
+      <td class="VarAnual Negativo hidden-xs">-3.44 %</td>
+    </tr>
+    <tr class="AmericaMovil">
+      <td class="Compania"><a href="#" class="hidden-xs">América Móvil</a><a href="#" class="visible-xs">AMX</a></td>
+      <td class="Fecha hidden-xs">29 enero</td>
+      <td class="ResultadoActual">67,353</td>
+      <td class="ExpectativaActual">67,353</td>
+      <td class="VarActual Negativo">-3.44 %</td>
+      <td class="ResultadoAnterior hidden-xs">67,353</td>
+      <td class="VarAnual Positivo hidden-xs">3.44 %</td>
+    </tr>
+    <tr class="ArcaContinental">
+      <td class="Compania"><a href="#" class="hidden-xs">Arca Continental</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs">30 enero</td>
+      <td class="ResultadoActual">67,353</td>
+      <td class="ExpectativaActual">67,353</td>
+      <td class="VarActual Positivo">3.44 %</td>
+      <td class="ResultadoAnterior hidden-xs">67,353</td>
+      <td class="VarAnual Negativo hidden-xs">-3.44 %</td>
+    </tr>
+    <tr class="Cemex">
+      <td class="Compania"><a href="#" class="hidden-xs">Cemex</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs">31 enero</td>
+      <td class="ResultadoActual">67,353</td>
+      <td class="ExpectativaActual">67,353</td>
+      <td class="VarActual Negativo">-3.44 %</td>
+      <td class="ResultadoAnterior hidden-xs">67,353</td>
+      <td class="VarAnual Positivo hidden-xs">3.44 %</td>
+    </tr>
+    <tr class="CocaColaFemsa">
+      <td class="Compania"><a href="#" class="hidden-xs">Coca-Cola Femsa</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs">30 enero</td>
+      <td class="ResultadoActual">67,353</td>
+      <td class="ExpectativaActual">67,353</td>
+      <td class="VarActual Positivo">3.44 %</td>
+      <td class="ResultadoAnterior hidden-xs">67,353</td>
+      <td class="VarAnual Negativo hidden-xs">-3.44 %</td>
+    </tr>
+    <tr class="ControladoraComercialMexicana">
+      <td class="Compania"><a href="#" class="hidden-xs">Controladora Comercial Mexicana</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="FEMSA">
+      <td class="Compania"><a href="#" class="hidden-xs">FEMSA</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="GenommaLab">
+      <td class="Compania"><a href="#" class="hidden-xs">Genomma Lab</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="Gruma">
+      <td class="Compania"><a href="#" class="hidden-xs">Gruma</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="GpoAeroportuarioCentroNorte">
+      <td class="Compania"><a href="#" class="hidden-xs">Gpo. Aeroportuario del Centro Norte</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class=" GpoAeroportuarioPacifico">
+      <td class="Compania"><a href="#" class="hidden-xs"> Gpo. Aeroportuario del Pacífico</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="GpoAeroportuarioSureste">
+      <td class="Compania"><a href="#" class="hidden-xs">Gpo. Aeroportuario del Sureste</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="GrupoBimbo">
+      <td class="Compania"><a href="#" class="hidden-xs">Grupo Bimbo</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="GrupoCarso">
+      <td class="Compania"><a href="#" class="hidden-xs">Grupo Carso</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="GrupoElektra">
+      <td class="Compania"><a href="#" class="hidden-xs">Grupo Elektra</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="GrupoMexico">
+      <td class="Compania"><a href="#" class="hidden-xs">Grupo México</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="GrupoSimec">
+      <td class="Compania"><a href="#" class="hidden-xs">Grupo Simec</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="ICA">
+      <td class="Compania"><a href="#" class="hidden-xs">ICA</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="Ienova">
+      <td class="Compania"><a href="#" class="hidden-xs">Ienova</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="IndustriasCH">
+      <td class="Compania"><a href="#" class="hidden-xs">Industrias CH</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="IndustriaPenoles">
+      <td class="Compania"><a href="#" class="hidden-xs">Industria Peñoles</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="KimberlyClark">
+      <td class="Compania"><a href="#" class="hidden-xs">Kimberly Clark</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="Lala">
+      <td class="Compania"><a href="#" class="hidden-xs">Lala</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="Liverpool">
+      <td class="Compania"><a href="#" class="hidden-xs">Liverpool</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="Mexichem">
+      <td class="Compania"><a href="#" class="hidden-xs">Mexichem</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="OHL">
+      <td class="Compania"><a href="#" class="hidden-xs">OHL</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="Pinfra">
+      <td class="Compania"><a href="#" class="hidden-xs">Pinfra</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="Televisa">
+      <td class="Compania"><a href="#" class="hidden-xs">Televisa</a><a href="#" class="visible-xs"></a></td>
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+    <tr class="WalMart">
+      <td class="Compania"><a href="#" class="hidden-xs">Wal-Mart</a><a href="#" class="visible-xs"></a></td> 
+      <td class="Fecha hidden-xs"> </td>
+      <td class="ResultadoActual"> </td>
+      <td class="ExpectativaActual"> </td>
+      <td class="VarActual Positivo"> </td>
+      <td class="ResultadoAnterior hidden-xs"> </td>
+      <td class="VarAnual hidden-xs"> </td>
+    </tr>
+  </table>
+  
+  <div id="GposFinancieros">
+    <h4>Grupos Financieros</h4>
+    <div class="Anotacion">Debido a los diferentes rubros que consideran los departamentos de análisis consultados, no se tomaron en cuenta las expectativas para grupos financieros.</div>
+  </div>
+
+  <table id="Ingresos" class="Indicadores">
+    <tr class="TableHead">
+      <th>Compañía</th>
+      <th class="AlignRight BorderRight hidden-xs">Reporte</th>
+      <th>Resultados 4T15</th>
+      <th class="">Resultados 4T14</th>
+      <th class="AlignRight">Variación</th>
+    </tr>
+    <tr class="Gentera">
+      <td class="Compania"><a href="#" class="hidden-xs">Gentera</a><a href="#" class="visible-xs">Gentera</a></td>
+      <td class="Fecha hidden-xs"></td>
+      <td class="ResultadoActual"> </td>
+      <td class="ResultadoAnterior"> </td>
+      <td class="VarAnual"> </td>
+    </tr>
+    <tr class="Banregio">
+      <td class="Compania"><a href="#" class="hidden-xs">Grupo Financiero Banregio</a><a href="#" class="visible-xs">Banregio</a></td>
+      <td class="Fecha hidden-xs"></td>
+      <td class="ResultadoActual"> </td>
+      <td class="ResultadoAnterior"> </td>
+      <td class="VarAnual"> </td>
+    </tr>
+    <tr class="Banorte">
+      <td class="Compania"><a href="#" class="hidden-xs">Grupo Financiero Banorte</a><a href="#" class="visible-xs">Banorte</a></td>
+      <td class="Fecha hidden-xs"></td>
+      <td class="ResultadoActual"> </td>
+      <td class="ResultadoAnterior"> </td>
+      <td class="VarAnual"> </td>
+    </tr>
+    <tr class="Inbursa">
+      <td class="Compania"><a href="#" class="hidden-xs">Grupo Financiero Inbursa</a><a href="#" class="visible-xs">Inbursa</a></td>
+      <td class="Fecha hidden-xs"></td>
+      <td class="ResultadoActual"> </td>
+      <td class="ResultadoAnterior"> </td>
+      <td class="VarAnual"> </td>
+    </tr>
+    <tr class="Santander">
+      <td class="Compania"><a href="#" class="hidden-xs">Grupo Financiero Santander</a><a href="#" class="visible-xs">Santander</a></td>
+      <td class="Fecha hidden-xs"></td>
+      <td class="ResultadoActual"> </td>
+      <td class="ResultadoAnterior"> </td>
+      <td class="VarAnual"> </td>
+    </tr>
+  </table>
+
+  <div id="Fuente">Millones de pesos / ND= No disponible / NA= No aplica / NC= No comparable / * Fecha estimada<br/>
+    FUENTE: Consenso entre 10 casas de bolsa: Monex, Ve por Más, Bursamétrica, Banorte-IXE, Accival, GBM, Credit Suisse, Interacciones, entre otras.</div>
+
+</div><!-- / .container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script_graficas.js"></script>
+<!-- Selects animados -->
+<script src="js/classie.js"></script>
+<script src="js/selectFx.js"></script>
+<script>
+  (function() {
+    [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+      new SelectFx(el);
+    } );
+  })();
+</script>
+</body>
+</html>
