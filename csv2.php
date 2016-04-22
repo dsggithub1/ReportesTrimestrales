@@ -5,9 +5,6 @@
 
 $archivo=$_REQUEST['archivo'];
  
- if(strlen($archivo==0))
- $archivo= "161tingresos.csv";
- 
  $trimestre=substr($archivo,2,1);
  
 
@@ -62,16 +59,16 @@ else if( strpos($archivo, "utilidad"))
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
         for="demo-menu-lower-left">
-      <li class="mdl-menu__item"><a href="http://www.facebook.com/share.php?u=http://www.elfinanciero.com.mx/pages/monitor-de-reportes-trimestrales.html" onClick="window.open(this.href, this.target, 'width=500,height=400, scrollbars=1'); return false;"><img src="img/facebook.svg" height="16" alt="">Facebook</a></li>
-      <li class="mdl-menu__item"><a href="http://twitter.com/home?status=http://www.elfinanciero.com.mx/pages/monitor-de-reportes-trimestrales.html" onClick="window.open(this.href, this.target, 'width=500,height=400, scrollbars=1'); return false;"><img src="img/twitter.svg" height="16" alt="">Twitter</a></li>
-      <li class="mdl-menu__item"><a href="https://plus.google.com/share?url=http://www.elfinanciero.com.mx/pages/monitor-de-reportes-trimestrales.html" onClick="window.open(this.href, this.target, 'width=500,height=400, scrollbars=1'); return false;"><img src="img/plus.svg" height="14" alt="">Google +</a></li>
-    
-    <?php
-    $ligashared = urlencode("http://www.elfinanciero.com.mx/pages/monitor-de-reportes-trimestrales.html");
-    
-    ?>
-    
-    <li class="mdl-menu__item visible-xs"><a href="whatsapp://send?text=<?php echo $ligashared; ?>" data-action="share/whatsapp/share"><img src="img/WhatsApp.svg" height="14" alt="">WhatsApp</a>
+      <li class="mdl-menu__item"><a href="http://www.facebook.com/share.php?u=http://graficos.elfinanciero.com.mx/2015/volver-al-futuro/grafica/index.html" onClick="window.open(this.href, this.target, 'width=500,height=400, scrollbars=1'); return false;"><img src="img/facebook.svg" height="16" alt="">Facebook</a></li>
+      <li class="mdl-menu__item"><a href="http://twitter.com/home?status=http://graficos.elfinanciero.com.mx/2015/volver-al-futuro/grafica/index.html" onClick="window.open(this.href, this.target, 'width=500,height=400, scrollbars=1'); return false;"><img src="img/twitter.svg" height="16" alt="">Twitter</a></li>
+      <li class="mdl-menu__item"><a href="https://plus.google.com/share?url=http://graficos.elfinanciero.com.mx/2015/volver-al-futuro/grafica/index.html" onClick="window.open(this.href, this.target, 'width=500,height=400, scrollbars=1'); return false;"><img src="img/plus.svg" height="14" alt="">Google +</a></li>
+	  
+	  <?php
+	  $ligashared = urlencode("http://www.elfinanciero.com.mx/pages/monitor-de-reportes-trimestrales.html");
+	  
+	  ?>
+	  
+	  <li class="mdl-menu__item visible-xs"><a href="whatsapp://send?text=<?php echo $ligashared; ?>" data-action="share/whatsapp/share"><img src="img/WhatsApp.svg" height="14" alt="">WhatsApp</a>
 </li>
     </ul>
 
@@ -91,37 +88,26 @@ else if( strpos($archivo, "utilidad"))
     ?>">Utilidad</a></li>
       </ul>
       <select name="Trimestre" id="Trimestre" onchange="location = this.options[this.selectedIndex].value;">
-	  
-	  
-	 
-	  <option value="csv.php?archivo=161tingresos.csv" <?php 
-      if($trimestre==1)
-        echo "selected";
-        
-    ?> >1ER. TRIMESTRE 2016</option>
-	
         <option value="csv.php?archivo=154tingresos.csv" <?php 
       if($trimestre==4)
         echo "selected";
         
     ?>>4TO. TRIMESTRE 2015</option>
-	
-	
         <option value="csv.php?archivo=153tingresos.csv" <?php 
       if($trimestre==3)
         echo "selected";
         
     ?>>3ER. TRIMESTRE 2015</option>
-	
-	
         <option value="csv.php?archivo=152tingresos.csv" <?php 
       if($trimestre==2)
         echo "selected";
         
     ?>>2DO. TRIMESTRE 2015</option>
-	
-
+        <option value="csv.php?archivo=151tingresos.csv" <?php 
+      if($trimestre==1)
+        echo "selected";
         
+    ?> >1ER. TRIMESTRE 2015</option>
       </select>
     </nav>
   </header>
@@ -194,23 +180,23 @@ while ($csvcontents = fgetcsv($handle)) {
     else if($i==1)
       $lineaA = $lineaA . "<a href='#' class='hidden-xs'>$column</a></td>";
     else if($i==2)
-  {
+	{
       $lineaB1 = "<td class='Fecha hidden-xs'>$column</td>";
-    $fechatemp=$column;
-   }
+	  $fechatemp=$column;
+	 }
     else if($i==3)
-  {
+	{
       $lineaC = "<td class='ResultadoActual'>$column</td>";
-     $resultadotemp=$column;
-   }
+	   $resultadotemp=$column;
+	 }
     else if($i==4)
-  {
-    if(strlen($resultadotemp)==0)
-    $lineaC = $lineaC . "<td class='ExpectativaActual'><div class='visible-xs'>$fechatemp</div><div class='visible-sm'>$column</div><div class='visible-md'>$column</div></td>";
-    else
-    
+	{
+		if(strlen($resultadotemp)==0)
+		$lineaC = $lineaC . "<td class='ExpectativaActual'><div class='visible-xs'>$fechatemp</div><div class='visible-sm'>$column</div><div class='visible-md'>$column</div></td>";
+		else
+		
       $lineaC = $lineaC . "<td class='ExpectativaActual'>$column</td>";
-  }
+	}
     else if($i==5)
       {
         $l_signo=signo($column);
